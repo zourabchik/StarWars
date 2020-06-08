@@ -1,0 +1,258 @@
+@font-face {
+  font-family: 'ProximaNova-Black';
+  src:
+    local('ProximaNova-Black') url('https://nomail.com.ua/files/eot/aa46d234cf405126cdd1c36600e4b978.eot?#iefix') format('embedded-opentype'),
+    url('https://nomail.com.ua/files/woff/aa46d234cf405126cdd1c36600e4b978.woff') format('woff'),
+    url('https://nomail.com.ua/files/woff2/aa46d234cf405126cdd1c36600e4b978.woff2') format('woff2');
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  background: #030000 url(../img/main-bg.jpg) top right -170% no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  max-width: 1060px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding-top: 90px;
+}
+
+.header-logo {
+  margin-right: 70px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 15px;
+}
+
+.hero-subtitle {
+  margin-top: 78px;
+  display: block;
+  font-size: 40px;
+  line-height: 100%;
+  font-family: 'ProximaNova-Black', sans-serif;
+}
+
+.hero-title {
+  font-size: 64px;
+  margin-top: 5px;
+  line-height: 78px;
+  font-family: 'ProximaNova-Black', sans-serif;
+  margin-bottom: 25px;
+}
+
+.hero-description {
+  font-size: 18px;
+  line-height: 150%;
+  max-width: 572px;
+  color: #AFAFAF;
+}
+
+.hero-premier {
+  display: block;
+  font-size: 18px;
+  line-height: 150%;
+  color: #B02000;
+  margin-button: 5px;
+}
+
+.hero-date {
+  display: block;
+  font-size: 24px;
+  line-height: 150%;
+  margin-bottom: 54px;
+}
+
+.button {
+  animation-iteration-count: inherit;
+}
+
+.button-play {
+  position: relative;
+  border: none;
+  text-decoration: none;
+  background: linear-gradient(90deg, #FB641A 0%, #FC3309 100%);
+  border-radius: 300px;
+  color: #fff;
+  padding: 25px 35px;
+  padding-right: 80px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.button-play:after {
+  content: "";
+  position: absolute;
+  height: 65px;
+  width: 65px;
+  background: #fff url(../img/polygon.svg) center no-repeat;
+  right: 0;
+  top: 0;
+  border-radius: 50%;
+
+}
+
+.button-play:before {
+  content: "";
+  width: 81px;
+  height: 81px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  border-radius: 50%;
+  right: -8px;
+  top: -8px;
+}
+
+.episodes {
+  padding: 60px 0;
+}
+
+.episodes-title {
+  font-size: 18px;
+  line-height: 150%;
+  margin-bottom: 24px;
+}
+
+.slider {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.slider-item:hover:before {
+  background: rgba(64, 101, 255, 0.86);
+}
+
+
+
+.slider-rating-stars {
+  opacity: 0;
+}
+
+.slider-item:hover .slider-rating-stars {
+  opacity: 1;
+}
+
+.slider-item {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px;
+  min-height: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 30px;
+  box-shadow: 8px 10px 26px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  transition: all 0, 2s;
+}
+
+.slider-item:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: rgba(80, 80, 80, 0.86);
+  transition: all 0, 2s;
+}
+
+.slider-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -2;
+}
+
+.slider-rating-label {
+  margin-right: 18px;
+}
+
+.star {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  background: url(../img/star.svg) no-repeat center;
+}
+
+.star-o {
+  background: url(../img/star-o.svg) no-repeat center;
+}
+
+.slider__nav--left {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent url(../img/Vector_left.svg) no-repeat center;
+  margin-right: 15px;
+  cursor: pointer;
+  outline: none;
+}
+
+.slider__nav--right {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent url(../img/Vector_right.svg) no-repeat center;
+  cursor: pointer;
+  outline: none;
+}
+
+.slider__nav--left span,
+.slider__nav--right span {
+  display: none;
+}
+
+@media(max-width:600px) {
+  .hero-subtitle {
+    font-size: 24px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+    line-height: 120%;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-star;
+  }
+
+  .header-logo {
+    margin-bottom: 30px;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-link {
+    margin-bottom: 10px;
+  }
+}
